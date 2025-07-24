@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: weather-discord-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python weatherapi_bot.py
+    envVars:
+      - key: WEATHER_API_KEY
+        fromDotEnv: true
+      - key: DISCORD_TOKEN
+        fromDotEnv: true
+      - key: GUILD_ID
+        fromDotEnv: true
