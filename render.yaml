@@ -6,8 +6,8 @@ services:
     startCommand: python weatherapi_bot.py
     envVars:
       - key: WEATHER_API_KEY
-        fromDotEnv: true
+        sync: false
       - key: DISCORD_TOKEN
-        fromDotEnv: true
+        sync: false
       - key: GUILD_ID
-        fromDotEnv: true
+        sync: false
