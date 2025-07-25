@@ -15,6 +15,7 @@ GUILD_ID = int(os.getenv("GUILD_ID"))
 
 # === Discord bot setup ===
 intents = discord.Intents.default()
+intents.message_content = True  # ✅ This line fixes the warning
 bot = commands.Bot(command_prefix="!", intents=intents)
 tree = bot.tree
 
