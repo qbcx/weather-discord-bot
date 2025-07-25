@@ -153,7 +153,7 @@ Create your own weather-themed bot or extend this with forecasts, alerts, or emo
 🔧 Crafted with code, ☁️ powered by APIs, and ⚡ launched on Render
 If this helped you.
 
-- ⭐ the repo and 🔁: github.com/qbcx/weather-discord-bot](https://github.com/qbcx/weather-discord-bot)
+- ⭐ the repo and 🔁: [github.com/qbcx/weather-discord-bot](https://github.com/qbcx/weather-discord-bot)
 - Project made by [@qbcx](https://github.com/qbcx)
 
 ---
