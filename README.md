@@ -1,42 +1,42 @@
 # ☁️ Weather Discord Bot
 
-A simple and fast Discord bot that fetches real-time weather info for any city using [WeatherAPI](https://www.weatherapi.com/). Built with Python and `discord.py`, and deployable for free on [Render](https://render.com).
+A simple and fast Discord bot that fetches real-time weather info for any city using [WeatherAPI](https://www.weatherapi.com/).  
+Built with Python and `discord.py`, and deployable for **free** on [Railway](https://railway.app).
 
 ---
 
 ## 🚀 Features
 
-- 🌤 Get current temperature, humidity, and condition
-- 📦 Slash command: `/weather [city]`
-- 🛡 Secrets managed securely with `.env`
-- 🌐 Free deployment on Render
+- 🌤 Slash command: `/weather [city]`
+- 🌡 Current temperature, humidity, and condition
+- 🔐 Secure secrets via `.env` or Railway variables
+- ⚡ Hosted for free using Railway (no port required)
 
 ---
 
-## 🔧 Requirements
+## 🧱 Requirements
 
 - Python 3.9+
-- A Discord bot (from [Discord Developer Portal](https://discord.com/developers/applications))
-- A free API key from [weatherapi.com](https://www.weatherapi.com/)
+- Discord bot from [discord.com/developers](https://discord.com/developers/applications)
+- WeatherAPI key from [weatherapi.com](https://www.weatherapi.com/)
 
 ---
 
-## 📁 Project Structure
+## 🗂 Project Structure
 
 ```
 weather-discord-bot/
 ├── weatherapi_bot.py        # Main bot logic
 ├── requirements.txt         # Python dependencies
-├── .env.example             # Template for your environment variables
-├── .gitignore               # Git exclusions
-└── render.yaml              # (Optional) for Render auto-deploy
+├── .env.example             # Environment variable template
+└── README.md                # Project documentation
 ```
 
 ---
 
-## 📦 Setup Locally
+## 💻 Local Setup
 
-1. **Clone the repo**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/YOUR_USERNAME/weather-discord-bot.git
    cd weather-discord-bot
@@ -48,13 +48,7 @@ weather-discord-bot/
    ```
 
 3. **Create a `.env` file**
-   Copy from the provided example:
-   ```
-   cp .env.example .env
-   ```
-
-   Then fill in your values:
-   ```
+   ```env
    DISCORD_TOKEN=your_discord_token
    WEATHER_API_KEY=your_weatherapi_key
    GUILD_ID=your_guild_id_as_number
@@ -67,60 +61,48 @@ weather-discord-bot/
 
 ---
 
-## 🌐 Deploy to Render (Free Hosting)
+## 🌐 Deploy to Railway (Recommended – Free)
 
-1. **Push this project to GitHub**
+1. Go to [https://railway.app](https://railway.app)
 
-2. **Go to [https://render.com](https://render.com)**
-   - Create an account
-   - Click “New → Web Service”
+2. Click **“New Project” → “Deploy from GitHub Repo”**
 
-3. **Connect your GitHub repo**
-   - Choose `weather-discord-bot`
+3. Choose your `weather-discord-bot` repo
 
-4. **Set the following settings:**
+4. Under the **Variables tab**, add:
 
-   - **Build Command**:
-     ```bash
-     pip install -r requirements.txt
-     ```
-   - **Start Command**:
-     ```bash
-     python weatherapi_bot.py
-     ```
+   | Key              | Value                      |
+   |------------------|----------------------------|
+   | `DISCORD_TOKEN`  | Your Discord bot token     |
+   | `WEATHER_API_KEY`| Your WeatherAPI key        |
+   | `GUILD_ID`       | Your Discord server ID     |
 
-5. **Add Environment Variables** in the Render dashboard:
+5. Under **Settings**, change the Start Command to:
 
-   | Key             | Value                     |
-   |------------------|---------------------------|
-   | `DISCORD_TOKEN`  | Your Discord bot token    |
-   | `WEATHER_API_KEY`| Your WeatherAPI key       |
-   | `GUILD_ID`       | Your Discord server ID    |
+   ```bash
+   python weatherapi_bot.py
+   ```
 
-6. **Deploy and Monitor Logs**
-   - Click “Manual Deploy → Deploy latest commit”
-   - Watch logs and confirm bot is running
+6. Click **"Deploy"** and check the logs for successful startup.
 
 ---
 
-## ✅ Example Usage
-
-In your Discord server (after inviting your bot):
+## 💬 Example Usage
 
 ```
-/weather Paris
+/weather Tokyo
 ```
 
-Output:
 ```
-🌡 Temperature: 27°C (Feels like 28°C)
+**Weather for Tokyo, Japan**
+🌡 Temperature: 27°C (Feels like 29°C)
+💧 Humidity: 60%
 ☁ Condition: Clear
-💧 Humidity: 48%
 ```
 
 ---
 
-## 📄 .env.example
+## 🧪 .env.example
 
 ```env
 DISCORD_TOKEN=your_discord_token_here
@@ -128,36 +110,31 @@ WEATHER_API_KEY=your_weatherapi_key_here
 GUILD_ID=your_guild_id_here
 ```
 
-> Never commit your real `.env` file to GitHub!
+> ⚠️ Do not commit your real `.env` file.
 
 ---
 
 ## 🛠 Tech Stack
 
-- [discord.py](https://discordpy.readthedocs.io/)
-- [WeatherAPI.com](https://www.weatherapi.com/)
-- [Render.com](https://render.com/)
-- `python-dotenv` for secret management
+- [`discord.py`](https://discordpy.readthedocs.io/)
+- [`weatherapi.com`](https://www.weatherapi.com/)
+- [`python-dotenv`](https://pypi.org/project/python-dotenv/)
+- [Railway](https://railway.app) for hosting
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests and forks are welcome!  
-Create your own weather-themed bot or extend this with forecasts, alerts, or emojis!
+Forks and pull requests are welcome!
 
 ---
 
-## 🚀 About This Project
+## 📜 License
 
-🔧 Crafted with code, ☁️ powered by APIs, and ⚡ launched on Render
-If this helped you.
-
-- ⭐ the repo and 🔁: [github.com/qbcx/weather-discord-bot](https://github.com/qbcx/weather-discord-bot)
-- Project made by [@qbcx](https://github.com/qbcx)
+MIT — free to use and modify
 
 ---
 
-## 🛡 License
+## 👤 Author
 
-MIT — free to use and modify.
+Created by [@qbcx](https://github.com/qbcx)
